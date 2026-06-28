@@ -99,3 +99,6 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 CLAUDE.md
+
+# Firebase config (contiene chiavi - non pubblicare)
+google-services.json
