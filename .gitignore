@@ -102,3 +102,10 @@ CLAUDE.md
 
 # Firebase config (contiene chiavi - non pubblicare)
 google-services.json
+
+# Firebase config generati (chiavi) - non pubblicare
+google-services-desktop.json
+google-services.xml
+
+# Firebase native libs desktop (troppo grandi per GitHub, non servono per Android)
+Assets/Firebase/Plugins/x86_64/
