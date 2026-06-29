@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8218174460731342423
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117304871639291900, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457064036873665012, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_Name
+      value: BossAlien
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987076853693520167, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6830208604104037176, guid: b37ddf1089f9e2b4d96e0a12d3a98c71, type: 3}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: fanCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: maxHealth
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: scoreBonus
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: fireInterval
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: aimedInterval
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: phase2FanCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: projectileSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: phase2FireInterval
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: aimedProjectileSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118781750868008133, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: phase2MoveMultiplier
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885674610147707169, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885674610147707169, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7b0633db08f3184993ea857fd11c104, type: 3}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aea9229028df9e4b87f459835f57843, type: 3}
+  m_Name: ShipLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::ShipLibrarySO
+  ships:
+  - displayName: BLUE
+    sprite: {fileID: -6876325050352781090, guid: 4e1f592b7a78a4a46ab107cf73dea361, type: 3}
+    visualScale: 1
+  - displayName: GREEN
+    sprite: {fileID: 2175466835822147688, guid: d35d97742234da843b0f58f45d095f37, type: 3}
+    visualScale: 0.99
+  - displayName: PURPLE
+    sprite: {fileID: -7383381553404722574, guid: 463fff32951a29b479b60b0f772e3dcb, type: 3}
+    visualScale: 0.92
+  - displayName: ORANGE
+    sprite: {fileID: -7952259803426283859, guid: 1dd0817101148cf47a00f45d3562ff52, type: 3}
+    visualScale: 0.96

@@ -356,8 +356,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossSpawner
   bossPrefab: {fileID: 5457064036873665012, guid: b7b0633db08f3184993ea857fd11c104, type: 3}
+  bossAlienPrefab: {fileID: 4158987349100709795, guid: d62ae507809f3c341975be9fcdc02298, type: 3}
   spawnViewportY: 0.85
   debugSpawnKey: 16
+  debugSpawnAlienKey: 27
   debugFinaleKey: 28
   bossAfterCycles: 1
   bossReappearCooldown: 20
@@ -3822,6 +3824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 10
+  maxMoveSpeed: 14
   leftBoundPadding: 1
   rightBoundPadding: 1
   upBoundPadding: 7

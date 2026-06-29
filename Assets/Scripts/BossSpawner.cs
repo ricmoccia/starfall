@@ -10,11 +10,13 @@ public class BossSpawner : MonoBehaviour
     enum DirectorState { Idle, BossActive, Cooldown }
 
     [SerializeField] GameObject bossPrefab;
+    [SerializeField] GameObject bossAlienPrefab;  // variante alieno (per ora solo evocabile via debug)
     [SerializeField] float spawnViewportY = 0.85f;
 
     [Header("Debug keys")]
-    [SerializeField] Key debugSpawnKey = Key.B;   // spawn boss singolo, ovunque
-    [SerializeField] Key debugFinaleKey = Key.N;  // forza il trigger del finale
+    [SerializeField] Key debugSpawnKey = Key.B;        // spawn corazzata singola, ovunque
+    [SerializeField] Key debugSpawnAlienKey = Key.M;   // spawn alieno singolo (test della variante)
+    [SerializeField] Key debugFinaleKey = Key.N;       // forza il trigger del finale
 
     [Header("Impossible finale")]
     [SerializeField] int bossAfterCycles = 1;       // primo boss dopo N cicli completi di ondate
@@ -36,6 +38,7 @@ public class BossSpawner : MonoBehaviour
     void Update()
     {
         if (Pressed(debugSpawnKey)) SpawnBoss();
+        if (Pressed(debugSpawnAlienKey)) SpawnBoss(bossAlienPrefab); // debug: solo evocazione, nessuna logica di difficoltà
         if (Pressed(debugFinaleKey)) TriggerFinale();
 
         UpdateDirector();
@@ -46,8 +49,8 @@ public class BossSpawner : MonoBehaviour
         switch (state)
         {
             case DirectorState.Idle:
-                // Trigger di produzione: SOLO in Impossible, dopo un ciclo completo di ondate.
-                if (IsImpossible() && currentBoss == null && enemySpawner != null
+                // Trigger di produzione: in Hard (alieno) e Impossible (corazzata), dopo un ciclo di ondate.
+                if (FinaleBossPrefab() != null && currentBoss == null && enemySpawner != null
                     && enemySpawner.GetCyclesCompleted() >= bossAfterCycles)
                 {
                     TriggerFinale();
@@ -75,13 +78,15 @@ public class BossSpawner : MonoBehaviour
         }
     }
 
-    // Avvia il finale: ferma lo spawn dei nemici (duello pulito) e fa comparire il boss.
+    // Avvia il finale: ferma lo spawn dei nemici (duello pulito) e fa comparire il boss della difficoltà.
     void TriggerFinale()
     {
         if (currentBoss != null) return; // un boss alla volta
+        GameObject prefab = FinaleBossPrefab();
+        if (prefab == null) return;      // Easy/Normal (o difficoltà ignota): nessun finale
         if (enemySpawner != null) enemySpawner.SetPaused(true);
         finaleEngaged = true;
-        SpawnBoss();
+        SpawnBoss(prefab);
         state = DirectorState.BossActive;
     }
 
@@ -105,19 +110,30 @@ public class BossSpawner : MonoBehaviour
         state = DirectorState.Idle; // la scena passerà comunque a GameOver
     }
 
-    public void SpawnBoss()
+    // Spawn di produzione/finale: usa sempre la corazzata (bossPrefab). La scelta del boss
+    // per difficoltà (alieno in Hard) è una tappa successiva.
+    public void SpawnBoss() => SpawnBoss(bossPrefab);
+
+    public void SpawnBoss(GameObject prefab)
     {
-        if (bossPrefab == null || currentBoss != null) return;
+        if (prefab == null || currentBoss != null) return;
 
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, spawnViewportY, 0f));
         pos.z = 0f;
-        currentBoss = Instantiate(bossPrefab, pos, Quaternion.identity);
+        currentBoss = Instantiate(prefab, pos, Quaternion.identity);
     }
 
-    bool IsImpossible()
+    // Quale boss usa il finale per la difficoltà corrente. null = niente finale (Easy/Normal o ignota).
+    // SOLO questa scelta cambia per difficoltà: comportamento/fasi/morte del boss restano identici.
+    GameObject FinaleBossPrefab()
     {
-        return DifficultyManager.Instance != null
-            && DifficultyManager.Instance.Current == DifficultyManager.Difficulty.Impossible;
+        if (DifficultyManager.Instance == null) return null;
+        switch (DifficultyManager.Instance.Current)
+        {
+            case DifficultyManager.Difficulty.Impossible: return bossPrefab;      // corazzata
+            case DifficultyManager.Difficulty.Hard: return bossAlienPrefab;       // alieno
+            default: return null;                                                 // Easy/Normal: nessun boss
+        }
     }
 
     bool PlayerGone()

@@ -18,7 +18,7 @@ public class DifficultyManager : MonoBehaviour
         {
             { Difficulty.Easy,   new DifficultyMultipliers { enemyFireRateMult = 1.25f, enemyProjectileSpeedMult = 0.9f, enemyHealthMult = 0.9f, playerHealthMult = 1.0f } },
             { Difficulty.Normal, new DifficultyMultipliers { enemyFireRateMult = 1.0f, enemyProjectileSpeedMult = 1.0f, enemyHealthMult = 1.0f, playerHealthMult = 1.0f } },
-            { Difficulty.Hard,   new DifficultyMultipliers { enemyFireRateMult = 0.85f, enemyProjectileSpeedMult = 1.15f, enemyHealthMult = 1.3f, playerHealthMult = 1.0f } },
+            { Difficulty.Hard,   new DifficultyMultipliers { enemyFireRateMult = 0.85f, enemyProjectileSpeedMult = 1.15f, enemyHealthMult = 1.3f, playerHealthMult = 1.2f } },
             { Difficulty.Impossible, new DifficultyMultipliers { enemyFireRateMult = 0.70f, enemyProjectileSpeedMult = 1.3f, enemyHealthMult = 1.8f, playerHealthMult = 1.5f } },
         };
 
