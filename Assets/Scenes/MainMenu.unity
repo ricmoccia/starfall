@@ -8786,11 +8786,11 @@ RectTransform:
   - {fileID: 1519600957}
   - {fileID: 957210827}
   - {fileID: 1567267246}
+  - {fileID: 1638817424}
+  - {fileID: 1546086276}
   - {fileID: 798141620}
   - {fileID: 687899765}
-  - {fileID: 1638817424}
   - {fileID: 1265541987}
-  - {fileID: 1546086276}
   - {fileID: 7794489887547589678}
   m_Father: {fileID: 1098242347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
